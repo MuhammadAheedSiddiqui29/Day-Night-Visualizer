@@ -14,15 +14,24 @@ body{
 }
 
 .container{
-    height: 10rem;
-    width: 30rem;
-    background-color: yellow;
+    height: 20rem;
+    width: 50rem;
+    background-color: white;
     color: black;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: 0;
     outline: 0;
     border-radius: 25%;
 }
+
+.image > img {
+    height: 8rem;
+    width: 8rem;
+    margin-left: 41%;
+}
+
+.time{
+    font-size: 7rem;
+    margin-left: 14%;
+    margin-top: 3%;
+}
+
