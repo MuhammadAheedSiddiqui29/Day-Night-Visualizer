@@ -14,17 +14,40 @@ function backgroundColor() {
 
     const image = document.createElement("img");
 
-    if(0 <= hour && hour <= 6){
-        document.body.style.backgroundColor = "black";
-        image.src = "/images/moon.png"; 
+    //Mid Night 
+    if(3 <= hour && hour <= 6){
+        document.body.style.backgroundColor = "#28282B";
+        image.src = "/images/cloudy-night.png"; 
+    }
+
+    //Morning
+    else if(6 < hour && hour <= 9){
+        document.body.style.backgroundColor = "#FFFAA0";
+        container.style.backgroundColor = "black";
+        container.style.color = "white";
+        image.src = "/images/rising-sun.png";
     } 
-    else if(6 < hour && hour <= 18){
+
+    //Day
+    else if(9 < hour && hour <= 18){
         document.body.style.backgroundColor = "yellow";
-        image.src = "/images/sun.png";
+        container.style.backgroundColor = "black";
+        container.style.color = "white";
+        image.src = "/images/sun copy.png";
     } 
+
+    //Evening
+    else if(18 < hour && hour <= 19){
+        document.body.style.backgroundColor = "#41416b";
+        container.style.backgroundColor = "black";
+        container.style.color = "white";
+        image.src = "/images/day-and-night.png";
+    } 
+    
+    //Night
     else{
         document.body.style.backgroundColor = "black";
-        image.src = "/images/moon.png";
+        image.src = "/images/cloudy-night.png";
     }
     
     imageDiv.appendChild(image);
