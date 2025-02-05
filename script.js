@@ -4,7 +4,7 @@ const timeDiv = document.querySelector(".time");
 
 setInterval(function timeClock(){
     const date = new Date();
-    container.querySelector(".time").textContent = date.toLocaleTimeString();
+    timeDiv.textContent = date.toLocaleTimeString();
 }, 1000);
 
 function backgroundColor() {
@@ -15,14 +15,14 @@ function backgroundColor() {
     const image = document.createElement("img");
 
     
-    //Night 
+    //Mid-Night 
     if(0 <= hour && hour <= 3){
         document.body.style.backgroundColor = "black";
         image.src = "/images/cloudy-night.png"; 
     }
 
 
-    //Mid Night 
+    //Early Morning 
     if(3 < hour && hour <= 6){
         document.body.style.backgroundColor = "#28282B";
         image.src = "/images/cloudy-night.png"; 
@@ -60,4 +60,9 @@ function backgroundColor() {
     
     imageDiv.appendChild(image);
 }
+
+// Run initially
 backgroundColor();
+
+// Update background every minute
+setInterval(backgroundColor, 60000);
