@@ -14,8 +14,16 @@ function backgroundColor() {
 
     const image = document.createElement("img");
 
+    
+    //Night 
+    if(0 <= hour && hour <= 3){
+        document.body.style.backgroundColor = "black";
+        image.src = "/images/cloudy-night.png"; 
+    }
+
+
     //Mid Night 
-    if(3 <= hour && hour <= 6){
+    if(3 < hour && hour <= 6){
         document.body.style.backgroundColor = "#28282B";
         image.src = "/images/cloudy-night.png"; 
     }
